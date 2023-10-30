@@ -1,0 +1,161 @@
+body {
+    min-height: 5000px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a:link {
+    color: salmon;
+    text-decoration: none;
+    /* 
+    text decoration could be underline and overline as well
+    */
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: brown;
+}
+
+a:active {
+    color: blue;
+}
+
+ul li {
+    /*
+    upper-roman, under-roman, decimal, decimal-leading-zero, none(if we want nothing there)
+    */
+    list-style-type: decimal-leading-zero;
+    list-style: inside square;
+    /*
+    could be inside and outside
+    */
+    list-style-position: outside;
+    /*
+    could be downloaded and we have to write url()
+    */
+    /* list-style-image: url(youtube.png);*/
+
+}
+
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    /* 
+    table and td, th also having its own line, if we want to cease duplication, we have to use border-collapse: collapse, 
+    if not seperate
+    */
+    text-align: center;
+}
+
+table td,
+table th {
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+thead tr {
+    background-color: blue !important;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: salmon;
+    /*every even line got the color salon*/
+}
+
+tbody tr:nth-child(odd) {
+    background-color: orange;
+    /*every odd line got the color orange*/
+}
+
+table tr:hover {
+    background-color: lightblue;
+}
+
+tbody tr:nth-child(n2) {
+    background-color: blueviolet;
+    /* if we write n2 or n3 then every second or third line could get that color,
+if we write only the number like 2, just the second line will get the color 
+*/
+}
+
+tbody tr:last-child {
+    background-color: black;
+    color: white;
+}
+
+tbody tr:first-child {
+    background-color: grey;
+    color: white;
+}
+
+.rgb-square {
+    width:250px;
+    height:250px;
+    background-color:rgb(50,50,50);
+    margin:15px;
+    /*
+    we put rgb()
+    if we put the same number to all the three places we will get grey 
+    if the numbers are smaller we will get a darker version, the numbers are bigger we get a lighter version
+    */
+}
+.rgba-square {
+    width:250px;
+    height:250px;
+    background-color:rgba(50,50,50,0.6);
+    margin:15px;
+    /* 
+    with rgba after the three number we could give a fourth from 0-1, 
+    which will affect the darkness, if we put higher number, we will get a lighter color texture
+    */
+}
+
+/* 
+we can put background image, html page, inspect, find the body and we write 
+there background-image: url (here we put the copied link of the picture)
+*/
+
+.hex-square {
+    width:250px;
+    height:250px;
+    background-color: #0000aa;
+    margin:15px;
+    /* 
+    this works in 16th numeric system, from 0 to f and ff would be equal to 255 in rgb system 
+    zero zero would equal to zero zero there as well
+    we dont need to write six numbers if we would like to write the same numbers 
+    like 555 would equal if we would have written 555555
+    */
+}
+
+.hexa-square {
+    width:250px;
+    height:250px;
+    background-color: #0000ff99;
+    margin:15px;
+}
+.pt-square {
+    width:200pt;
+    height:250pt;
+    border:1px solid grey;
+    margin:15px;
+}
+
+.root-em {
+font-size: 10px;
+}
+
+.em-font-size {
+    font-size: 2em;
+}
+
+.rem-font-size {
+    font-size: 2rem;
+}
